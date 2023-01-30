@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Height Converter</title>
+    <style>
+      body {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+        min-height: 100vh;
+        background-color: #101820ff;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      #outerBox {
+        min-width: 40%;
+        padding: 40px;
+        border-radius: 15px;
+        background-color: #f2aa4cff;
+      }
+
+      #outerBox input {
+        min-width: 65%;
+        margin-right: 25px;
+        padding: 10px 5px;
+      }
+
+      #outerBox p {
+        font-size: small;
+      }
+
+      #invalid {
+        font-size: medium;
+        color: red;
+      }
+      #outerBox button {
+        min-width: 20%;
+        background-color: #101820ff;
+        color: #f2aa4cff;
+        font: bolder;
+        border-radius: 0;
+        padding: 10px 5px;
+      }
+
+      #outerBox button:hover {
+        cursor: pointer;
+      }
+
+      .outputBox {
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: #101820ff;
+        margin: 20px;
+        text-align: left;
+      }
+
+      .outputBox input {
+        color: green;
+        font-weight: bold;
+        padding: 5px;
+        text-align: center;
+        border-radius: 10px;
+      }
+      .out {
+        color: #f2aa4cff;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="outerBox">
+      <h1>HEIGHT CONVERTER</h1>
+      <p>Enter your height in feet:</p>
+      <div class="input-field">
+        <input id="entry" type="text" placeholder="Enter value in feet" />
+        <button><b> Convert </b></button>
+        <p id="invalid">invalid output message</p>
+      </div>
+      <div class="outputBox">
+        <div class="cm">
+          <strong><p class="out">Height in centimeters:</p></strong>
+          <input type="text" value="cms" id="oput" />
+        </div>
+        <div class="inch">
+          <strong><p class="out">Height in inches:</p></strong>
+          <input type="text" value="inch" id="oput" />
+        </div>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
