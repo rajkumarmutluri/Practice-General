@@ -78,19 +78,38 @@
       <div class="input-field">
         <input id="entry" type="text" placeholder="Enter value in feet" />
         <button><b> Convert </b></button>
-        <p id="invalid">invalid output message</p>
+        <p id="invalid">&nbsp;</p>
       </div>
       <div class="outputBox">
         <div class="cm">
           <strong><p class="out">Height in centimeters:</p></strong>
-          <input type="text" value="cms" id="oput" />
+          <input type="text" value="cms" id="cms" />
         </div>
         <div class="inch">
           <strong><p class="out">Height in inches:</p></strong>
-          <input type="text" value="inch" id="oput" />
+          <input type="text" value="inch" id="inches" />
         </div>
       </div>
     </div>
-    <script></script>
+    <script>
+      const inputHeight = document.getElementById("entry").innerHTML
+      const OutputCms = document.getElementsByClassName("cms").innerHTML
+      const OutputInches = document.getElementsByClassName("inches").innerHTML
+
+      let invalidMessage = document.getElementById("invalid").innerText
+
+      const btn = document.getElementsByTagName("button")
+
+      btn.addEventListener("click", () => {
+        if (isNaN(inputHeight)) {
+          invalidMessage = "Please enter a valid number for height"
+          return
+        }
+        if (inputHeight > 9) {
+          invalidMessage = "No human in the known history is taller than 9 feet. Please enter a valid height"
+          return
+        }
+      })
+    </script>
   </body>
 </html>
